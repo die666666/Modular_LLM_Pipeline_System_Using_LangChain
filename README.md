@@ -93,25 +93,13 @@ git clone https://github.com/YOUR_USERNAME/autochain.git
 cd autochain
 ```
 
-### 2. Virtual environment
-
-```bash
-python -m venv .venv
-
-# Windows
-.venv\Scripts\activate
-
-# macOS / Linux
-source .venv/bin/activate
-```
-
-### 3. Install dependencies
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Pull a model
+### 3. Pull a model
 
 ```bash
 # ✅ Recommended — best JSON output, ~2GB RAM
@@ -121,7 +109,7 @@ ollama pull qwen2.5:3b
 ollama pull llama3.2:1b
 ```
 
-### 5. Launch
+### 4. Launch
 
 ```bash
 # Web UI
@@ -334,21 +322,6 @@ pip install duckduckgo-search
 streamlit run app.py
 ```
 
----
-
-## 📦 Full Dependencies
-
-```txt
-langchain
-langchain-ollama
-langchain-core
-pydantic
-streamlit
-pdfplumber
-python-docx
-reportlab
-duckduckgo-search
-```
 
 ---
 
@@ -361,31 +334,6 @@ duckduckgo-search
 | `--mode` | `demo` | CLI mode |
 | `--file` | — | Input file for financial/summarize |
 | `--file2` | — | Second file for eval mode |
-
----
-
-## 🚢 Pushing to GitHub
-
-```bash
-# Create .gitignore
-cat > .gitignore << 'END'
-.venv/
-__pycache__/
-*.pyc
-.autochain_memory.json
-*.pdf
-*.docx
-.env
-END
-
-# Commit and push
-git init
-git add .
-git commit -m "feat: AutoChain v2 — LangChain + Ollama local AI pipeline"
-git remote add origin https://github.com/YOUR_USERNAME/autochain.git
-git branch -M main
-git push -u origin main
-```
 
 ---
 
